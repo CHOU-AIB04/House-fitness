@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    box-shadow: 0 0 20px wheat,
+                 0 0 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+    position: fixed;
+    z-index: 10;
+}
+#header div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: black;
+}
+#logo{
+    width: 95px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#logo:hover{
+    transform: scale(1.05);
+}
+#mode{
+    width: 45px;
+    height: 19px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+#mode i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 25px;
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+}
+ul li a{
+    position: relative;
+    text-decoration: none;
+    color: wheat;
+    transition: 1s;
+}
+ul li a::after{
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid wheat;
+    width: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+ul li a:hover{
+    color: wheat !important;
+}
+ul li a:hover::after{
+    width: 50%;
+}
+button{
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px wheat;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+button:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 10px wheat,
+                inset 0 0 2px black;
+    color: wheat;
+}
